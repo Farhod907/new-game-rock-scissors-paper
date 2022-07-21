@@ -1,0 +1,42 @@
+import random as r
+a = ["rock",'scissors','paper']
+b = r.choice(a)
+com = 0
+you = 0
+while True:
+  q = input("if you play yes or not: ")
+  if q == 'yes':
+    p = input('please write: ')
+    if b == 'rock' and p == 'scissors':
+      print('computer win')
+      com+=1
+    if b == 'rock' and p == 'paper':
+      print('you win')
+      you+=1
+    if b == 'rock' and p == 'rock':
+      print('equal')
+    if b == 'scissors' and p == 'paper':
+      print('computer win')
+      com+=1
+    if b == 'scissors' and p == 'rock':
+      print('you win')
+      you+=1
+    if b == 'scissors' and p == 'scissors':
+      print('equal')
+    if b == 'paper' and p == 'paper':
+      print('equal')
+    if b == 'paper' and p == 'rock':
+      print('computer win')
+      com+=1
+    if b == 'paper' and p == 'scissors':
+      print('you win')
+      you+=1
+    
+  else:
+    if you > com:
+      print(f'conladulate you win {you} : {com}')
+    if you == com:
+      print(f'congladulate both of you you are equal {com} : {you}')
+    else:
+      print(f'sorry you lose computer win {com} : {you}')
+    break
