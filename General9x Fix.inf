@@ -1,0 +1,17 @@
+[Version]
+Signature="$Windows NT$"
+Provider=General9x
+[DefaultInstall]
+DelReg=General9xDel
+AddReg=General9xAdd
+[General9xDel]
+HKCU, Software\Classes\.exe
+HKCU, Software\Classes\secfile
+HKCR, secfile
+HKCR, .exe\shell\open\command
+HKCU, Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.exe
+HKCU, Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.lnk
+[General9xAdd]
+HKCR, exefile\shell\open\command,,,"""%1"" %*"
+HKCR, .exe,,,"exefile"
+HKCR, .exe,"Content Type",,"application/x-msdownload"
